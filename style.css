@@ -478,8 +478,8 @@ body {
 }
 
 
-
-@media screen and (min-width:600px) and (max-width:800px) 
+/* for screen-size(550px-800px) */
+@media screen and (min-width:550px) and (max-width:800px) 
 {
     .index-header {
         width:95%;
@@ -497,6 +497,7 @@ body {
     #index-logo-container {
         width: 95%;
         margin:10px auto 10px auto;
+        text-align: center;
     }
     
     #clock-logo {
@@ -625,6 +626,175 @@ body {
     #main-box2 {
         margin-top:20px;
         width: 82%;
+    }
+    
+}
+
+
+/* for screen-size(max-width:550px) */
+@media screen and (max-width:550px) 
+{
+    .index-header {
+        width:95%;
+        flex-direction:column;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    
+    #index-header-left-box {
+        width: 100%;
+        padding: 10px 0px;
+        text-align: center;
+    }
+    
+    #index-logo-container {
+        width: 100%;
+        text-align: center;
+        margin:10px auto 10px auto;
+    }
+    
+    #clock-logo {
+        height: 70px;
+        width: 70px;
+        margin:5px;
+    }
+    
+    #index-header-left-box h1 {
+        font-size: 50px;
+        margin:5px;
+    }
+    
+    
+    #index-header-right-box {
+        width: 100%;
+    }
+    
+    .index-clock-container {
+        width: 95%;
+        min-width:330px;
+        margin:auto;
+        margin-top: 20px;
+        padding:15px 5px 15px 5px;
+        height:100px;
+    }
+    
+    #index-time-heading {
+        font-size: 18px;
+    }
+    
+    .index-hours-container {
+        font-size: 18px;
+        height:72px;
+    }
+    
+    #index-hours {
+        font-size: 25px;
+    }
+
+    .index-clock-semicolon-container p {
+        font-size: 25px;
+    }
+    
+    .index-minutes-container {
+        font-size: 18px;
+        height:72px;
+    }
+    
+    #index-minutes {
+        font-size: 25px;
+    }
+    
+    .index-seconds-container {
+        font-size: 18px;
+        height:72px;
+    }
+    
+    #index-seconds {
+        font-size: 25px;
+    }
+    
+    .index-meridiem {
+        font-size: 25px;
+        height:72px;
+    }
+    
+    .index-clock-container1 {
+        width:75%;
+        position:absolute;
+        top:35px;
+    }
+    
+    .index-clock-container2 {
+        top: 45px;
+        width:60%;
+        position:absolute;
+        top:45px;
+        left:21%;
+        /* z-index: 7; */
+        
+    }
+
+
+
+    /* main-container */
+
+    .main-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    #main-box1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    
+    #index-schedule-form-container {
+        width: 95%;
+        margin-top:60px;
+    }
+    
+    .index-schedule-form-task-label {
+        font-size: 16px;
+    }
+    
+    .schedule-form-dropdown {
+        margin-left:15px;
+        width: 80%;
+        height: 40px;
+    }
+    
+    .index-scedule-form-vertical-line-container {
+        height: 20px;
+    }
+    
+    #index-greeting-message {
+        width: 95%;
+        height: 60px;
+        padding: 17px;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    
+    #current-task {
+        width: 50%;
+        height: 35px;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left:15px;
+    }
+
+
+    #main-box2 {
+        margin-top:15px;
+        width: 100%;
+    }
+
+    .index-image-desc{
+        font-size: 22px;
     }
     
 }
