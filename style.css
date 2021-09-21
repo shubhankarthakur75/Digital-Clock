@@ -1,0 +1,630 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: bauhaus;
+    src: url("./assessts/fonts/bauhaus_hv_bt/BAUHAUSH.ttf");
+}
+
+body {
+    background-color: #3D087B;
+}
+
+
+/* index.html*/
+
+
+/*index- header */
+
+.index-header {
+    /* border:2px solid red; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+
+#index-header-left-box {
+    width: 47%;
+    /* border:2px solid green; */
+    font-family: bauhaus;
+    color: aliceblue;
+    padding: 30px 20px;
+}
+
+#index-logo-container {
+    width: 95%;
+    margin: auto;
+}
+
+#clock-logo {
+    height: 80px;
+    width: 80px;
+    vertical-align: middle;
+}
+
+#index-header-left-box h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+}
+
+
+/* header-right */
+
+#index-header-right-box {
+    width: 47%;
+    /* border:2px solid green; */
+    position: relative;
+}
+
+.index-clock-container {
+    width: 92%;
+    margin:auto;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* .clock{
+    border:1px solid black;
+} */
+
+.index-time-heading-container {
+    width: 16%;
+}
+
+#index-time-heading {
+    color: #3D087B;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.index-hours-container {
+    font-size: 23px;
+    height: 90px;
+    font-family: 'Barlow', sans-serif;
+    color: #5F0089;
+    width: 16%;
+    background-color: #f6e2ff;
+    border-radius: 5px;
+}
+
+.index-hours-container p {
+    margin: 5px 0px 8px 0px;
+    text-align: center;
+}
+
+#index-hours {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+}
+
+.index-clock-semicolon-container {
+    width: 1%;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.index-clock-semicolon-container p {
+    text-align: center;
+    color: #8A11BF;
+    font-size: 30px;
+    margin: 27px 0px;
+}
+
+.index-minutes-container {
+    font-size: 23px;
+    height: 90px;
+    font-family: 'Barlow', sans-serif;
+    color: #5F0089;
+    width: 16%;
+    background-color: #f6e2ff;
+    border-radius: 5px;
+}
+
+.index-minutes-container p {
+    margin: 5px 0px 8px 0px;
+    text-align: center;
+}
+
+#index-minutes {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+}
+
+.index-seconds-container {
+    font-size: 23px;
+    height: 90px;
+    font-family: 'Barlow', sans-serif;
+    color: #5F0089;
+    width: 16%;
+    background-color: #f6e2ff;
+    border-radius: 5px;
+}
+
+.index-seconds-container p {
+    margin: 5px 0px 8px 0px;
+    text-align: center;
+}
+
+#index-seconds {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+}
+
+.index-meridiem {
+    text-align: center;
+    width: 16%;
+    height: 90px;
+    font-size: 36px;
+    font-family: 'Barlow', sans-serif;
+    color: #FFFFFF;
+    background-image: linear-gradient(to bottom right, #b463f2, #f455d6);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.index-clock-container1 {
+    width: 75%;
+    height: 100px;
+    position: absolute;
+    left: 12%;
+    top: 74px;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.index-clock-container2 {
+    width: 65%;
+    height: 100px;
+    position: absolute;
+    left: 18%;
+    right: 10%;
+    top: 85px;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    z-index: -2;
+}
+
+
+/* index-header-ends */
+
+
+/* main-container */
+
+.main-container {
+    /* border:2px solid red; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#main-box1 {
+    /* border: 2px solid green; */
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#index-schedule-form-container {
+    width: 90%;
+    height: 300px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:10px;
+    /* margin: 0px 0px 0px 35px; */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    border-radius: 15px;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.index-schedule-form-image-container {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.index-schedule-form-task-label {
+    font-family: 'Manrope', sans-serif;
+    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #3D087B;
+}
+
+.schedule-form-dropdown {
+    width: 90%;
+    color: #3D087B;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #ccc6c6;
+}
+
+.index-scedule-form-vertical-line-container {
+    width: 85%;
+    margin: auto;
+    grid-column: 1 /span3;
+    border-left: 2px solid #C2C2C2;
+    height: 30px;
+}
+
+#index-greeting-message {
+    width: 90%;
+    height: 77px;
+    margin:15px auto;
+    /* margin-top:10px; */
+    /* margin: 15px 0px 10px 35px; */
+    padding: 22px;
+    color: white;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: bauhaus;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+#current-task {
+    width: 46%;
+    text-align: center;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(to right, #8453ef, #f95eff);
+    margin: 5px 0px 0px 35px;
+    padding: 5px;
+}
+
+#current-task:hover {
+    background: linear-gradient(to right, #f95eff, #8453ef);
+}
+
+#main-box2 {
+    /* border:2px solid green; */
+    width: 47%;
+}
+
+#index-main-image-container {
+    width: 92%;
+    margin:auto;
+    margin-top:20px;
+    background-color: white;
+    border-radius: 15px;
+    position:relative;
+    /* border:2px solid white; */
+}
+
+#index-main-image1 {
+    width:100%;
+
+    max-height: 474px;
+}
+
+.index-image-desc{
+    font-size: 27px;
+    font-family: bauhaus;
+    color:#8E53F0;
+    position:absolute;
+    top:30px;
+    left:8%;
+}
+
+/* index-main-ends */
+
+
+
+/* Responsive index.html */
+/* for screen-size(800px-1150px) */
+
+@media screen and (min-width:800px) and (max-width:1150px) {
+
+    /* index-header */
+    #clock-logo {
+        height: 70px;
+        width: 70px;
+    }
+    
+    #index-header-left-box h1 {
+        font-size: 50px;
+    }
+    
+
+    /* clock-container  */
+    .index-clock-container {
+        width:98%;
+        padding: 10px 10px;
+    }
+
+    .index-time-heading-container {
+        font-size: 20px;
+    }
+    
+    #index-time-heading {
+        font-size: 18px;
+        width:18%;
+    }
+    
+    .index-hours-container {
+        font-size: 20px;
+        height: 85px;
+        width:18%;
+    }
+    
+    #index-hours {
+        font-size: 30px;
+    }
+    
+    .index-clock-semicolon-container {
+        width: 1%;
+    }
+    
+    .index-clock-semicolon-container p {
+        font-size: 25px;
+    }
+    
+    .index-minutes-container {
+        font-size: 20px;
+        height: 85px;
+        width:18%;
+    }
+    #index-minutes {
+        font-size: 30px;
+    }
+    
+    .index-seconds-container {
+        font-size: 20px;
+        height: 85px;
+        width:18%;
+    }
+    
+    #index-seconds {
+        font-size: 30px;
+    }
+    
+    .index-meridiem {
+        height: 85px;
+        font-size: 30px;
+        width:18%;
+    }
+    
+    .index-clock-container1 {
+        left: 11%;
+        top: 48px;
+    }
+    
+    .index-clock-container2 {
+        left: 17%;
+        right: 10%;
+        top: 60px;
+    }
+    
+
+    /* index-main-box */
+
+    #index-schedule-form-container {
+        width: 98%;
+        height: 300px;
+        margin-top:15px;
+    }
+    
+    .index-schedule-form-task-label {
+        font-size: 17px;
+    }
+    
+    #index-greeting-message {
+        width: 98%;
+        height: 65px;
+        font-size: 25px;
+        padding:15px;
+        margin-top:10px;
+    }
+    
+    #current-task {
+        height: 40px;
+        font-size: 20px;
+        margin-left:5px;
+    }
+
+    #main-box2 {
+        width: 47%;
+    }
+    
+    #index-main-image-container {
+        width: 98%;
+        margin-top:15px;
+    }
+    
+    #index-main-image1 {
+        width: 98%;
+        /* margin-top:5px; */
+        min-height: 300px;
+
+    }
+    
+    .index-image-desc{
+        font-size: 22px;
+        font-family: bauhaus;
+        color:#8E53F0;
+        position:absolute;
+        top:30px;
+        left:8%;
+    }
+}
+
+
+
+@media screen and (min-width:600px) and (max-width:800px) 
+{
+    .index-header {
+        width:95%;
+        flex-direction:column;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    
+    #index-header-left-box {
+        width: 100%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    #index-logo-container {
+        width: 95%;
+        margin:10px auto 10px auto;
+    }
+    
+    #clock-logo {
+        height: 90px;
+        width: 90px;
+        margin:10px;
+    }
+    
+    #index-header-left-box h1 {
+        font-size: 60px;
+        margin:10px;
+    }
+    
+    
+    #index-header-right-box {
+        width: 100%;
+    }
+    
+    .index-clock-container {
+        width: 75%;
+        margin-top: 20px;
+    }
+    
+    #index-time-heading {
+        font-size: 18px;
+    }
+    
+    .index-hours-container {
+        font-size: 20px;
+    }
+    
+    #index-hours {
+        font-size: 30px;
+    }
+
+    .index-clock-semicolon-container p {
+        font-size: 25px;
+    }
+    
+    .index-minutes-container {
+        font-size: 20px;
+    }
+    
+    #index-minutes {
+        font-size: 30px;
+    }
+    
+    .index-seconds-container {
+        font-size: 20px;
+    }
+    
+    #index-seconds {
+        font-size: 30px;
+    }
+    
+    .index-meridiem {
+        font-size: 30px;
+    }
+    
+    .index-clock-container1 {
+        width:60%;
+        left:20%;
+        top: 64px;
+    }
+    
+    .index-clock-container2 {
+        top: 72px;
+        width:50%;
+        left:25%;
+    }
+
+
+
+    /* main-container */
+
+    .main-container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    #main-box1 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    
+    #index-schedule-form-container {
+        width: 83%;
+        margin-top:60px;
+    }
+    
+    .index-schedule-form-task-label {
+        font-size: 18px;
+    }
+    
+    .schedule-form-dropdown {
+        margin-left:15px;
+        width: 80%;
+        height: 40px;
+    }
+    
+    .index-scedule-form-vertical-line-container {
+        height: 20px;
+    }
+    
+    #index-greeting-message {
+        width: 83%;
+        height: 65px;
+        padding: 17px;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    
+    #current-task {
+        width: 40%;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left:55px;
+    }
+
+
+    #main-box2 {
+        margin-top:20px;
+        width: 82%;
+    }
+    
+}
