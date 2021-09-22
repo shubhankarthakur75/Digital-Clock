@@ -47,15 +47,20 @@ function timer() {
     let greetMessage = function () {
         let d = new Date();
         let hours = d.getHours();
-        if (hours > 5 && hours < 12) {
+        // console.log(hours);
+        if (hours >= 5 && hours < 12) {
             let greet = document.querySelector('#index-greeting-message');
             greet.innerText = "GOOD MORNING !!"
         }
-        if (hours > 12 && hours <19) {
+        if (hours >=12 && hours <17) {
             let greet = document.querySelector('#index-greeting-message');
             greet.innerText = "GOOD AFTERNOON !!"
         }
-        if (hours < 23 && hours>19) {
+        if (hours >=17 && hours <21) {
+            let greet = document.querySelector('#index-greeting-message');
+            greet.innerText = "GOOD EVENING !!"
+        }
+        if (hours>=21 && hours <= 23) {
             let greet = document.querySelector('#index-greeting-message');
             greet.innerText = "GOOD NIGHT !!"
         }
