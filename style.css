@@ -166,7 +166,7 @@ body {
     font-size: 36px;
 }
 
-.index-meridiem {
+#index-meridiem {
     text-align: center;
     width: 16%;
     height: 90px;
@@ -407,7 +407,7 @@ body {
         font-size: 30px;
     }
     
-    .index-meridiem {
+    #index-meridiem {
         height: 85px;
         font-size: 30px;
         width:18%;
@@ -553,7 +553,7 @@ body {
         font-size: 30px;
     }
     
-    .index-meridiem {
+    #index-meridiem {
         font-size: 30px;
     }
     
@@ -713,7 +713,7 @@ body {
         font-size: 25px;
     }
     
-    .index-meridiem {
+    #index-meridiem {
         font-size: 25px;
         height:72px;
     }
