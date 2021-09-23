@@ -644,12 +644,12 @@ body {
     #index-header-left-box {
         width: 100%;
         padding: 10px 0px;
-        text-align: center;
+        text-align:center;
     }
     
     #index-logo-container {
         width: 100%;
-        text-align: center;
+        text-align:center;
         margin:10px auto 10px auto;
     }
     
