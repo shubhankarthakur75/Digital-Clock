@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: bauhaus;
-    src: url("./assessts/fonts/bauhaus_hv_bt/BAUHAUSH.ttf");
+    src: url("./assets/fonts/bauhaus_hv_bt/BAUHAUSH.ttf");
 }
 
 body {
@@ -317,12 +317,12 @@ body {
     background-color: white;
     border-radius: 15px;
     position:relative;
+    overflow: hidden;
     /* border:2px solid white; */
 }
 
 #index-main-image1 {
     width:100%;
-
     max-height: 474px;
 }
 
