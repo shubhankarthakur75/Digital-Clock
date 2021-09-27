@@ -70,7 +70,7 @@ setInterval(greetMessage, 1000);
 // Greeting message section ends
 
 
-// Image-showcase-
+// Image-showcase
 
 let startWakeUpTime;
 let endWakeUpTime;
