@@ -173,8 +173,10 @@ party.addEventListener("dblclick",partyFunction2)
 function partyFunction1(){
     document.getElementById("index-main-image1").src = "./assets/images/party-image.jpg";
     document.querySelector(".index-image-desc").innerHTML="Let's Make a Partyyy!!";
+    document.getElementById("current-task").innerText="Double Click Here !!";
 }
 function partyFunction2(){
     document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
     document.querySelector(".index-image-desc").innerHTML="";
+    document.getElementById("current-task").innerText="Party Time";
 }
