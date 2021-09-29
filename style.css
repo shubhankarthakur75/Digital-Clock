@@ -260,17 +260,32 @@ body {
     color: #3D087B;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
-    height: 45px;
+    height: 50px;
     border-radius: 5px;
-    border: 1px solid #ccc6c6;
+    border: 1px solid #d68686;
+    margin-top:15px;
 }
 
-.index-scedule-form-vertical-line-container {
-    width: 85%;
+.index-schedule-form-vertical-line-container {
+    width: 10%;
     margin: auto;
-    grid-column: 1 /span3;
+    grid-column: 1 /span 1 ;
     border-left: 2px solid #C2C2C2;
     height: 30px;
+
+}
+
+#error-message-container{
+    width:100%;
+    grid-column:2/span 2;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+}
+
+.schedule-form-error-message{
+    color:red;
+    font-weight: 500;
 }
 
 #index-greeting-message {
@@ -753,8 +768,9 @@ body {
     }
     
     #index-schedule-form-container {
-        width: 95%;
+        width: 100%;
         margin-top:60px;
+        grid-template-columns: 15% 40% 45%;
     }
     
     .index-schedule-form-task-label {
