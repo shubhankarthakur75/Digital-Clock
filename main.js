@@ -42,6 +42,7 @@ setInterval(timer, 1000);
 
 // Timer section ends
 
+
 // Greeting message section starts
 
 let greetMessage = function () {
@@ -70,24 +71,26 @@ setInterval(greetMessage, 1000);
 // Greeting message section ends
 
 
-// Image-showcase
 
 let startWakeUpTime;
 let endWakeUpTime;
 let wakeUpTime = document.getElementById('wake-up-time');
 
+// addErrorMessage Function
 function addErrorMessage(errorMessageId,errorDropbox) {
     let scheduleFormDropdown = document.querySelector(".schedule-form-dropdown");
     errorDropbox.style.borderColor = "red";
     errorMessageId.classList.add("schedule-form-error-message");
 }
 
+// removeErrorMessage Function
 function removeErrorMessage(errorMessageId,errorDropbox) {
     let scheduleFormDropdown = document.querySelector(".schedule-form-dropdown");
     errorMessageId.classList.toggle("schedule-form-error-message");
     errorMessageId.innerText = "";
     errorDropbox.style.borderColor = "#d68686";
 }
+
 
 wakeUpTime.addEventListener("change", () => {
     let selectedWakeUpTime = wakeUpTime.options[wakeUpTime.selectedIndex].value.split("-");
@@ -154,6 +157,10 @@ sleepTime.addEventListener("change", () => {
 });
 
 
+
+
+// Image-showcase starts
+
 function imageHandlerFunction() {
     d = new Date();
     let hours = d.getHours();
@@ -218,6 +225,8 @@ function imageHandlerFunction() {
 }
 setInterval(imageHandlerFunction, 1000);
 
+
+// Party Function
 let party = document.getElementById("current-task");
 party.addEventListener("click", partyFunction1)
 party.addEventListener("dblclick", partyFunction2)
@@ -230,5 +239,5 @@ function partyFunction1() {
 function partyFunction2() {
     document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
     document.querySelector(".index-image-desc").innerHTML = "";
-    document.getElementById("current-task").innerText = "Party Time";
+    document.getElementById("current-task").innerText = "Party Time !!";
 }
