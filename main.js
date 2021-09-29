@@ -77,15 +77,15 @@ let endWakeUpTime;
 let wakeUpTime = document.getElementById('wake-up-time');
 
 // addErrorMessage Function
-function addErrorMessage(errorMessageId,errorDropbox) {
+function addErrorMessage(errorMessageId, errorDropbox) {
     let scheduleFormDropdown = document.querySelector(".schedule-form-dropdown");
     errorDropbox.style.borderColor = "red";
     errorMessageId.classList.add("schedule-form-error-message");
-    errorMessageId.innerText="*This slot is already occupied.Please reselect";
+    errorMessageId.innerText = "*This slot is already occupied.Please reselect";
 }
 
 // removeErrorMessage Function
-function removeErrorMessage(errorMessageId,errorDropbox) {
+function removeErrorMessage(errorMessageId, errorDropbox) {
     let scheduleFormDropdown = document.querySelector(".schedule-form-dropdown");
     errorMessageId.classList.toggle("schedule-form-error-message");
     errorMessageId.innerText = "";
@@ -104,13 +104,13 @@ wakeUpTime.addEventListener("change", () => {
         startWakeUpTime = selectedWakeUpTime[0];
         endWakeUpTime = selectedWakeUpTime[1];
         let errorMessage = document.getElementById("wake-up-error-message");
-        let errorDropbox=document.getElementById("wake-up-time");
-        removeErrorMessage(errorMessage,errorDropbox);
+        let errorDropbox = document.getElementById("wake-up-time");
+        removeErrorMessage(errorMessage, errorDropbox);
     }
     else {
         let errorMessage = document.getElementById("wake-up-error-message");
-        let errorDropbox=document.getElementById("wake-up-time");
-        addErrorMessage(errorMessage,errorDropbox);
+        let errorDropbox = document.getElementById("wake-up-time");
+        addErrorMessage(errorMessage, errorDropbox);
     }
 });
 
@@ -124,13 +124,13 @@ lunchTime.addEventListener("change", () => {
         startLunchTime = selectedLunchTime[0];
         endLunchTime = selectedLunchTime[1];
         let errorMessage = document.getElementById("lunch-error-message");
-        let errorDropbox=document.getElementById("lunch-time");
-        removeErrorMessage(errorMessage,errorDropbox);
+        let errorDropbox = document.getElementById("lunch-time");
+        removeErrorMessage(errorMessage, errorDropbox);
     }
     else {
         let errorMessage = document.getElementById("lunch-error-message");
-        let errorDropbox=document.getElementById("lunch-time");
-        addErrorMessage(errorMessage,errorDropbox);
+        let errorDropbox = document.getElementById("lunch-time");
+        addErrorMessage(errorMessage, errorDropbox);
     }
 });
 
@@ -143,18 +143,37 @@ sleepTime.addEventListener("change", () => {
         startSleepTime = selectedSleepTime[0];
         endSleepTime = selectedSleepTime[1];
         let errorMessage = document.getElementById("sleep-error-message");
-        let errorDropbox=document.getElementById("sleep-time");
-        removeErrorMessage(errorMessage,errorDropbox)
+        let errorDropbox = document.getElementById("sleep-time");
+        removeErrorMessage(errorMessage, errorDropbox)
     }
     else {
         let errorMessage = document.getElementById("sleep-error-message");
-        let errorDropbox=document.getElementById("sleep-time");
-        addErrorMessage(errorMessage,errorDropbox);
+        let errorDropbox = document.getElementById("sleep-time");
+        addErrorMessage(errorMessage, errorDropbox);
     }
 
 });
 
 
+
+// Party Function
+let party = document.getElementById("current-task");
+party.addEventListener("click", partyFunction1);
+party.addEventListener("dblclick", partyFunction2);
+let isPartyOn = 0;
+
+function partyFunction1() {
+    document.getElementById("index-main-image1").src = "./assets/images/party-image.jpg";
+    document.querySelector(".index-image-desc").innerHTML = "Let's Make a Partyyy!!";
+    document.getElementById("current-task").innerText = "Double Click Here !!";
+    isPartyOn = 1;
+}
+function partyFunction2() {
+    document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+    document.querySelector(".index-image-desc").innerHTML = "";
+    document.getElementById("current-task").innerText = "Party Time !!";
+    isPartyOn = 0;
+}
 
 
 // Image-showcase starts
@@ -166,20 +185,24 @@ function imageHandlerFunction() {
     let state = 0;
 
     // Wake-up-time
-    if (state === 0) {
+    if (isPartyOn === 0) {
 
-        if (startWakeUpTime === undefined && endWakeUpTime === undefined) {
+        if (state === 0) {
 
-        }
-        else if (hours >= startWakeUpTime && hours < endWakeUpTime) {
-            state = 1;
-            document.getElementById("index-main-image1").src = "./assets/images/wake-up-image.png";
-            document.querySelector(".index-image-desc").innerText = "HEY IT'S WAKE-UP TIME...!! "
-        }
-        else {
-            state = 0;
-            document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
-            document.querySelector(".index-image-desc").innerText="";
+            if (startWakeUpTime === undefined && endWakeUpTime === undefined) {
+
+            }
+            else if (hours >= startWakeUpTime && hours < endWakeUpTime) {
+                state = 1;
+                document.getElementById("index-main-image1").src = "./assets/images/wake-up-image.png";
+                document.querySelector(".index-image-desc").innerText = "HEY IT'S WAKE-UP TIME...!! "
+            }
+            else {
+                state = 0;
+                document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+                document.querySelector(".index-image-desc").innerText = "";
+            }
+
         }
 
     }
@@ -187,38 +210,43 @@ function imageHandlerFunction() {
 
     // Lunch-time
 
-    if (state === 0) {
+    if (isPartyOn === 0) {
+        if (state === 0) {
 
-        if (startLunchTime === undefined && endLunchTime === undefined) {
-        }
-        else if (hours >= startLunchTime && hours < endLunchTime) {
-            state = 1;
-            document.getElementById("index-main-image1").src = "./assets/images/pizza-party.png";
-            document.querySelector(".index-image-desc").innerHTML =
-                "HEY IT'S LUNCH TIME...!!";
-        }
-        else {
-            state = 0;
-            document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
-            document.querySelector(".index-image-desc").innerText="";
+            if (startLunchTime === undefined && endLunchTime === undefined) {
+            }
+            else if (hours >= startLunchTime && hours < endLunchTime) {
+                state = 1;
+                document.getElementById("index-main-image1").src = "./assets/images/pizza-party.png";
+                document.querySelector(".index-image-desc").innerHTML =
+                    "HEY IT'S LUNCH TIME...!!";
+            }
+            else {
+                state = 0;
+                document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+                document.querySelector(".index-image-desc").innerText = "";
+            }
         }
     }
 
 
     // Nap-time
-    if (state === 0) {
 
-        if (startSleepTime === undefined && endSleepTime === undefined) {
-        }
-        else if (hours >= startSleepTime && hours < endSleepTime) {
-            state = 1;
-            document.getElementById("index-main-image1").src = "./assets/images/sleep-image.png";
-            document.querySelector(".index-image-desc").innerHTML = "HEY IT'S NAP TIME...PLEASE HAVE A SLEEP!! ";
-        }
-        else {
-            state = 0;
-            document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
-            document.querySelector(".index-image-desc").innerText="";
+    if (isPartyOn === 0) {
+        if (state === 0) {
+
+            if (startSleepTime === undefined && endSleepTime === undefined) {
+            }
+            else if (hours >= startSleepTime && hours < endSleepTime) {
+                state = 1;
+                document.getElementById("index-main-image1").src = "./assets/images/sleep-image.png";
+                document.querySelector(".index-image-desc").innerHTML = "HEY IT'S NAP TIME...PLEASE HAVE A SLEEP!! ";
+            }
+            else {
+                state = 0;
+                document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+                document.querySelector(".index-image-desc").innerText = "";
+            }
         }
     }
 
@@ -227,18 +255,3 @@ function imageHandlerFunction() {
 setInterval(imageHandlerFunction, 1000);
 
 
-// Party Function
-let party = document.getElementById("current-task");
-party.addEventListener("click", partyFunction1)
-party.addEventListener("dblclick", partyFunction2)
-
-function partyFunction1() {
-    document.getElementById("index-main-image1").src = "./assets/images/party-image.jpg";
-    document.querySelector(".index-image-desc").innerHTML = "Let's Make a Partyyy!!";
-    document.getElementById("current-task").innerText = "Double Click Here !!";
-}
-function partyFunction2() {
-    document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
-    document.querySelector(".index-image-desc").innerHTML = "";
-    document.getElementById("current-task").innerText = "Party Time !!";
-}
