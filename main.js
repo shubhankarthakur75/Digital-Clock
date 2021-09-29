@@ -81,6 +81,7 @@ function addErrorMessage(errorMessageId,errorDropbox) {
     let scheduleFormDropdown = document.querySelector(".schedule-form-dropdown");
     errorDropbox.style.borderColor = "red";
     errorMessageId.classList.add("schedule-form-error-message");
+    errorMessageId.innerText="*This slot is already occupied.Please reselect";
 }
 
 // removeErrorMessage Function
@@ -109,7 +110,6 @@ wakeUpTime.addEventListener("change", () => {
     else {
         let errorMessage = document.getElementById("wake-up-error-message");
         let errorDropbox=document.getElementById("wake-up-time");
-        errorMessage.innerText = "*This slot is already booked.Please reselect.";
         addErrorMessage(errorMessage,errorDropbox);
     }
 });
@@ -130,7 +130,6 @@ lunchTime.addEventListener("change", () => {
     else {
         let errorMessage = document.getElementById("lunch-error-message");
         let errorDropbox=document.getElementById("lunch-time");
-        errorMessage.innerText = "*This slot is already booked.Please reselect.";
         addErrorMessage(errorMessage,errorDropbox);
     }
 });
@@ -150,7 +149,6 @@ sleepTime.addEventListener("change", () => {
     else {
         let errorMessage = document.getElementById("sleep-error-message");
         let errorDropbox=document.getElementById("sleep-time");
-        errorMessage.innerText = "*This slot is already booked.Please reselect.";
         addErrorMessage(errorMessage,errorDropbox);
     }
 
@@ -179,8 +177,9 @@ function imageHandlerFunction() {
             document.querySelector(".index-image-desc").innerText = "HEY IT'S WAKE-UP TIME...!! "
         }
         else {
-            document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
             state = 0;
+            document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+            document.querySelector(".index-image-desc").innerText="";
         }
 
     }
@@ -201,6 +200,7 @@ function imageHandlerFunction() {
         else {
             state = 0;
             document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+            document.querySelector(".index-image-desc").innerText="";
         }
     }
 
@@ -218,6 +218,7 @@ function imageHandlerFunction() {
         else {
             state = 0;
             document.getElementById("index-main-image1").src = "./assets/images/main-image.png";
+            document.querySelector(".index-image-desc").innerText="";
         }
     }
 
