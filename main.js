@@ -25,7 +25,7 @@ function timer() {
     }
 
     let hoursTimer = document.querySelector('#index-hours');
-    hoursTimer.innerText = timeFormat((hours < 12) ? hours : hours % 12);
+    hoursTimer.innerText = timeFormat((hours <= 12) ? hours : hours % 12);
 
     let minutesTimer = document.querySelector('#index-minutes')
     minutesTimer.innerText = timeFormat(minutes);
