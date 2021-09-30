@@ -301,6 +301,7 @@ body {
     font-family: bauhaus;
     font-size: 27px;
     font-weight: 900;
+    display:none;
 }
 
 #current-task {
